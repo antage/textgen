@@ -1,5 +1,10 @@
 package main
 
+import (
+	"errors"
+	"reflect"
+)
+
 func For(start int, end int) <-chan int {
 	step := 1
 	if end < start {
@@ -32,4 +37,21 @@ func For(start int, end int) <-chan int {
 
 func List(items ...interface{}) []interface{} {
 	return items
+}
+
+func Map(args ...interface{}) (map[string]interface{}, error) {
+	m := make(map[string]interface{})
+	stringType := reflect.TypeOf("")
+	for i := 0; i < len(args); i += 2 {
+		key := args[i]
+		value := args[i+1]
+
+		if reflect.TypeOf(key) != stringType {
+			return nil, errors.New("only string can be used as key of map")
+		}
+
+		m[key.(string)] = value
+	}
+
+	return m, nil
 }

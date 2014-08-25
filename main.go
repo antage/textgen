@@ -34,6 +34,7 @@ func main() {
 	templates.Funcs(map[string]interface{}{
 		"for":  For,
 		"list": List,
+		"map":  Map,
 	})
 
 	var err error

@@ -52,3 +52,11 @@ Convert arguments list (arg1, arg2, ...) to a sequence.
 Examples:
 
 * `list "hello" "world"` - returns ["hello", "world"].
+
+### map _key1_ _value1_ _key2_ _value2_ _..._
+
+Make a map. Only string keys are supported.
+
+Example:
+
+* `map "key1" 2 "key2" "s"` - return {"key1": 2, "key2": "s"}.
