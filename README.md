@@ -39,11 +39,12 @@ $ textgen sample.t
 ### for _start_ _end_
 
 Generates a sequence of integer numbers from `start` to `end`.
+Sequence is lazy (implemented via Go's channel).
 
 Examples:
 
-* `for 1 5` - generates [1, 2, 3, 4, 5].
-* `for 3 1` - generates [3, 2, 1].
+* `for 1 5` - returns [1, 2, 3, 4, 5].
+* `for 3 1` - returns [3, 2, 1].
 
 ### loop _arg1_ _arg2_ _..._
 
@@ -59,4 +60,20 @@ Make a map. Only string keys are supported.
 
 Example:
 
-* `map "key1" 2 "key2" "s"` - return {"key1": 2, "key2": "s"}.
+* `map "key1" 2 "key2" "s"` - returns {"key1": 2, "key2": "s"}.
+
+### uppercase _str_
+
+Transform `str` string to upper case.
+
+Example:
+
+* `uppercase "hello"` - returns "HELLO".
+
+### lowercase _str_
+
+Transform `str` string to lower case.
+
+Example:
+
+* `lowercase "HELLO"` - returns "hello".

@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"reflect"
+	"strings"
 )
 
 func For(start int, end int) <-chan int {
@@ -54,4 +55,12 @@ func Map(args ...interface{}) (map[string]interface{}, error) {
 	}
 
 	return m, nil
+}
+
+func Uppercase(s string) string {
+	return strings.ToUpper(s)
+}
+
+func Lowercase(s string) string {
+	return strings.ToLower(s)
 }

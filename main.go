@@ -32,9 +32,11 @@ func main() {
 
 	templates := template.New("")
 	templates.Funcs(map[string]interface{}{
-		"for":  For,
-		"list": List,
-		"map":  Map,
+		"for":       For,
+		"list":      List,
+		"map":       Map,
+		"uppercase": Uppercase,
+		"lowercase": Lowercase,
 	})
 
 	var err error
