@@ -36,7 +36,7 @@ $ textgen sample.t
 
 ## Additional template functions
 
-### `for start end`
+### for _start_ _end_
 
 Generates a sequence of integer numbers from `start` to `end`.
 
@@ -45,10 +45,10 @@ Examples:
 * `for 1 5` - generates [1, 2, 3, 4, 5].
 * `for 3 1` - generates [3, 2, 1].
 
-### `loop arg1 arg2 ...`
+### loop _arg1_ _arg2_ _..._
 
 Convert arguments list (arg1, arg2, ...) to a sequence.
 
 Examples:
 
-* `list "hello" "world"` - returns ["hello", "world"]
+* `list "hello" "world"` - returns ["hello", "world"].
