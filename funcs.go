@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"reflect"
 	"strings"
 )
@@ -63,4 +64,31 @@ func Uppercase(s string) string {
 
 func Lowercase(s string) string {
 	return strings.ToLower(s)
+}
+
+func ToInt(num interface{}) (int, error) {
+	switch x := num.(type) {
+	case float32:
+		return int(x), nil
+	case float64:
+		return int(x), nil
+	case int:
+		return x, nil
+	case uint:
+		return int(x), nil
+	case int8:
+		return int(x), nil
+	case uint8:
+		return int(x), nil
+	case int16:
+		return int(x), nil
+	case uint16:
+		return int(x), nil
+	case int32:
+		return int(x), nil
+	case uint32:
+		return int(x), nil
+	default:
+		return 0, errors.New(fmt.Sprintf("can't convert value to int (value type: %T, value: %v)", x, x))
+	}
 }

@@ -77,3 +77,11 @@ Transform `str` string to lower case.
 Example:
 
 * `lowercase "HELLO"` - returns "hello".
+
+### toInt _val_
+
+Convert `val` to `int` type.
+
+Example:
+
+* `toInt 5.5` - returns 5.

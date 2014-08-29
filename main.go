@@ -37,6 +37,7 @@ func main() {
 		"map":       Map,
 		"uppercase": Uppercase,
 		"lowercase": Lowercase,
+		"toInt":     ToInt,
 	})
 
 	var err error
